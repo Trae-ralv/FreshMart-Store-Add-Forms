@@ -1,0 +1,47 @@
+body {
+    background-color: #f8f9fa;
+	margin: 0;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+h1 {
+    color: #343a40;
+    font-weight: bold;
+}
+
+.table {
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.table-dark {
+    background-color: #343a40;
+}
+
+.btn-primary {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-primary:hover {
+    background-color: #218838;
+    border-color: #218838;
+}
+
+.btn-outline-secondary {
+    border-radius: 0.5rem;
+}
+
+#main-container {
+	width: 40%;
+}
+
+.content {
+    /*flex: 1; ensures it takes up remaining space*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+}
