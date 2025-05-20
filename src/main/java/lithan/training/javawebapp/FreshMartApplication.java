@@ -1,17 +1,17 @@
 package lithan.training.javawebapp;
 
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-@Configuration
-@EnableAutoConfiguration
-@ComponentScan({"FreshMart","lithan.training.javawebapp","controller","model","config","payment","service","dao"})
+// Main application class with JPA configuration
+@SpringBootApplication
+@EntityScan(basePackages = "lithan.training.javawebapp.model")
+@EnableJpaRepositories(basePackages = "lithan.training.javawebapp.repository")
 public class FreshMartApplication {
-
-	public static void main(String[] args) {
-		SpringApplication.run(FreshMartApplication.class, args);
-	}
-
+    // Entry point for the application
+    public static void main(String[] args) {
+        SpringApplication.run(FreshMartApplication.class, args);
+    }
 }
